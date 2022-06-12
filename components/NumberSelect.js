@@ -57,9 +57,11 @@ const Option = styled.div`
 
 const HiddenInput = styled.input`
   position: absolute;
-  width: 1em;
-  height: 1em;
-  top: 1em;
+  width: calc(2em - 6px);
+  height: calc(2em - 10px);
+  top: 2px;
+  left: 3px;
+  border-radius: 0px;
 
   // toggle this to show/hide
   opacity: 0;
