@@ -7,7 +7,7 @@ export default function Modal({ label, children }) {
     <Popover className="relative">
       {({ open }) => (
         <>
-          <Popover.Button>{label}</Popover.Button>
+          <StyledButton>{label}</StyledButton>
           <Popover.Overlay />
           <Transition
             as={Fragment}
@@ -30,4 +30,11 @@ export default function Modal({ label, children }) {
 
 const StyledPanel = styled(Popover.Panel)`
   position: absolute;
+`;
+
+const StyledButton = styled(Popover.Button)`
+  transition: color var(--animation-timing);
+  &:hover {
+    color: var(--white-lighter);
+  }
 `;
