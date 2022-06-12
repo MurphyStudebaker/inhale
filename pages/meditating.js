@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Visualizer from "../components/Visualizer";
-import Progress from "../components/progress";
+import Progress from "../components/Progress";
 import { useEffect, useState } from "react";
 import useDuration from "../context/DurationContext";
 import { useRouter } from "next/router";
