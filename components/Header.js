@@ -15,6 +15,7 @@ export default function Header({ bell, setBell }) {
       </Modal>
       <Modal label="preferences">
         <SoundButton onClick={() => setBell(!bell)}>
+          <p>Starting Bell</p>
           {bell ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +43,6 @@ export default function Header({ bell, setBell }) {
               />
             </svg>
           )}
-          <p>Starting Bell</p>
         </SoundButton>
       </Modal>
     </HeaderWrapper>
@@ -51,6 +51,15 @@ export default function Header({ bell, setBell }) {
 
 const SoundButton = styled.button`
   display: flex;
+  text-align: right;
+  gap: var(--spacing);
+  svg {
+    height: 1.2em;
+  }
+  min-width: max-content;
+
+  /* hack to make modal content not overflow */
+  margin-left: -30px;
 `;
 
 const HeaderWrapper = styled.header`

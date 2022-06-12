@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Visualizer from "../components/Visualizer";
 import Progress from "../components/Progress";
 import { useEffect, useState } from "react";
@@ -46,6 +46,16 @@ export default function Meditating({}) {
   );
 }
 
+const breathe = keyframes`
+  0% {
+    transform: scale(1);
+  } 50% {
+    transform: scale(2);
+  } 100% {
+    transform: scale(1);
+  }
+`;
+
 const PageWrapper = styled.div`
   height: 100%;
   display: flex;
@@ -65,4 +75,5 @@ const Circle = styled.div`
   height: 100px;
   border-radius: 50%;
   background-color: deeppink;
+  animation: 12s ${breathe} infinite;
 `;

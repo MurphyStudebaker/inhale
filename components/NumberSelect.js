@@ -48,6 +48,10 @@ const Option = styled.div`
   border-radius: var(--radius);
   padding: var(--spacing) calc(var(--spacing) * 2);
 
+  label {
+    transition: color var(--animation-timing);
+  }
+
   // since we hid the radio buttons, add back in
   // visual cue for in focus selection
   &:focus-within {
@@ -57,9 +61,11 @@ const Option = styled.div`
 
 const HiddenInput = styled.input`
   position: absolute;
-  width: 1em;
-  height: 1em;
-  top: 1em;
+  width: calc(2em - 6px);
+  height: calc(2em - 10px);
+  top: 2px;
+  left: 3px;
+  border-radius: 0px;
 
   // toggle this to show/hide
   opacity: 0;
@@ -70,5 +76,9 @@ const HiddenInput = styled.input`
 
   &:checked + label {
     color: white;
+  }
+
+  &:hover + label {
+    color: var(--white-lighter);
   }
 `;

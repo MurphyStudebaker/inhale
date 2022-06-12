@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     --white: #fefefe;
     --white-lighter: hsla(0, 100%, 100%, 0.8);
     --radius: 8px;
+    --animation-timing: 300ms;
   }
 
   body {
@@ -67,15 +68,16 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     color: inherit;
     border: none;
+    transition: color var(--animation-timing);
   }
 
   a {
     color: inherit;
     text-decoration: none;
+    transition: all var(--animation-timing);
   }
 
   a:hover {
-    text-decoration: underline;
     color: var(--white);
   }
 `;
