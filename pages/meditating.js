@@ -1,3 +1,4 @@
+import Head from "next/head";
 import styled, { keyframes } from "styled-components";
 import Visualizer from "../components/Visualizer";
 import Progress from "../components/Progress";
@@ -37,6 +38,14 @@ export default function Meditating({}) {
 
   return (
     <PageWrapper>
+      <Head>
+        <title>Meditating | Inhale </title>
+        <meta
+          name="description"
+          content="A simple web timer for unguided meditations."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <VizWrapper>
         <Circle />
         {/* <Visualizer meditating={true} /> */}

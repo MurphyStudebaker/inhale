@@ -23,11 +23,15 @@ export default function Home() {
   return (
     <PageWrapper>
       <Head>
-        <title>Inhale</title>
+        <title>Inhale | Simple Meditation Timer </title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap"
           rel="stylesheet"
+        />
+        <meta
+          name="description"
+          content="A simple web timer for unguided meditations."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
